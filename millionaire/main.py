@@ -103,12 +103,11 @@ def chooseOption(event, option):
     else:
         tk.messagebox.showerror("Не круто", "Неправильный ответ, ты проиграл :/")
         
-        parser = Parser("C:/Users/valer/Desktop/Programming/Python/Exam/millionaire/questions.txt")
+        parser = Parser("questions.txt")
         updateVariables(parser.getNewQuestion())
 # endregion
 
 # region Additional Functions
-
 def addButtonLambda(name, function, row, column, lambdaVar, stick="nswe"):
     button = tk.Button(win, textvariable=name)
     button.grid(row=row, column=column, stick=stick)
